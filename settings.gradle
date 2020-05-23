@@ -1,0 +1,5 @@
+rootProject.name = 'kafka'
+include 'producer'
+include 'consumer'
+include 'eureka-server'
+
