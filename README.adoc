@@ -14,7 +14,7 @@
 
 == Start Environment
 
-* Open a terminal and inside `spring-boot-kafka-example` root folder run
+* Open a terminal and inside `kafka` root folder run
 +
 [source]
 ----
@@ -30,7 +30,7 @@ docker-compose ps
 
 == Running Applications with Gradle
 
-Inside `spring-boot-kafka-example` root folder, run the following `Gradle` commands in different terminals
+Inside `kafka` root folder, run the following `Gradle` commands in different terminals
 
 * *eureka-server*
 +
@@ -57,7 +57,7 @@ Inside `spring-boot-kafka-example` root folder, run the following `Gradle` comma
 
 === Build Application's Docker Image
 
-* In a terminal, make sure you are in `spring-boot-kafka-example` root folder
+* In a terminal, make sure you are in `kafka` root folder
 
 * In order to build the applications docker images, run the following script
 +
@@ -120,7 +120,7 @@ Inside `spring-boot-kafka-example` root folder, run the following `Gradle` comma
 
 === Start Application's Docker Container
 
-* In a terminal, make sure you are inside `spring-boot-kafka-example` root folder
+* In a terminal, make sure you are inside `kafka` root folder
 
 * Run following script
 +
@@ -171,7 +171,7 @@ docker-compose down -v
 +
 `Zipkin` can be accessed at http://localhost:9411
 +
-The figure below shows an example of the complete flow a news passes through. It goes since `producer-api`, where the news is created, until `news-client`.
+The figure below shows an example of the complete flow a request passes through. It goes since `producer-api`, where the message is created, until `consumer-api`.
 +
 image::images/zipkin-sample.png[]
 
@@ -179,9 +179,7 @@ image::images/zipkin-sample.png[]
 +
 `Kafka Manager` can be accessed at http://localhost:9000
 +
-The figure below shows the Kafka topics consumers. As we can see, the consumers are updated as the `lag` is `0`
-+
-image::images/kafka-manager-consumers.png[]
+
 +
 *Configuration*
 +
